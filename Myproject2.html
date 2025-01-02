@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" href="length.css" type="text/css"> -->
+    <!-- <script type="text/javascript" src="new.js"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    
+    <style>
+    .one{  
+    width:30%;
+    height:400px;
+    background-image: linear-gradient(to left,rgb(84, 5, 231),rgb(202, 26, 26));
+    /* background-color: blue; */
+    border: 2px solid rgb(24, 23, 23);
+    margin:auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    position: relative;
+}
+      h1{
+        color:aliceblue;
+         margin-left: 60px;
+        margin-top: 10px;
+      }  
+      #input{
+        width: 60%;
+        height:50px;
+        margin: auto;
+        margin-top: 50px;
+        margin-left: 20%;
+        font-size: 30px;
+      }
+      .button{
+        color: black;
+        margin-left: 40%;
+        margin-top: 50px;
+        width: 40%;
+        height: 60px;
+        color: red;
+      }
+      #result{
+        position: relative;
+        background-color: aliceblue;
+        width:35%;
+        height:45px;
+        margin: auto;
+        font-weight: bold;
+      }
+      /* @media only screen  and(max-width:800px){
+        body{
+          background-color:red;
+        }
+      } */
+    </style>
+</head>
+<body>
+    <div class="one">
+        
+        <h1>PALINDROME</h1>
+        <input type="text" placeholder="Enter no" id="input">
+        <div class="button">
+            <button onclick="pali()">SUBMIT</button>
+        </div>
+        <div id="result">
+           
+        </div>
+    </div>
+
+  <script>
+    function pali(){
+    let msg=Number(document.getElementById("input").value);
+    let two;
+    two=msg;
+    let sum=0,rem;
+    while(msg>0){
+        rem=msg%10;
+        sum=(sum*10)+rem;
+        msg=parseInt(msg/10);
+    }
+    if(sum==two){
+    window.alert(two+ " is palindrone");}
+    else{
+    window.alert(two+ " is not palindrone");}
+
+     let result=document.getElementById("result")
+     result.innerHTML= (window.alert(two+ " is palindrone"));
+    }
+</script> 
+</body>
+</html>
