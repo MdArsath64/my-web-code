@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .home{
+            background:linear-gradient(rgba(39, 38, 38, 0.5),rgba(110, 115, 112, 0.5));
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-attachment: fixed !important;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+        #anher{
+            color:white;
+            font-weight: bold;    
+        }
+        /* nav a{
+          font-size: large;
+        } */
+        #anher:hover{
+            background-color: beige;
+            /* border-bottom:2px solid black; */
+            color:black;
+        }
+        .nav{
+            width: 100%;
+        }
+        section{
+            display: flex;
+            /* align-items: center; */
+            min-height: 100vh;
+            width: 100vw;
+        }
+        #video{
+            /* background: linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,1)); */
+            z-index: -1;
+            position: absolute;
+            background-image: linear-gradient(to right, rgb(213, 56, 56) , yellow );   
+             opacity: 0.4;
+            object-fit: cover;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            top:7%;
+
+        }
+        .content{
+          display: flex;
+        position: relative;
+        top:20%;
+        /* margin: 0 20%; */
+        /* top: 15%; */
+        }
+        #home span{
+          color:blue;
+          font-weight: bold;
+          position: absolute;
+          opacity: 0;
+          animation: text 2s ease-in-out infinite;
+        }
+        #home .span1{
+          animation-delay: 0s;
+        }
+        #home .span2{
+          animation-delay: 0s;
+        }
+        @keyframes text{
+          50%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 0;
+          }
+        }
+        @media screen and (max-width:700px) {
+          .content {
+          top:10%;
+          }
+
+        }
+        .content2{
+          display: flex;
+          align-items: center;
+          /* margin-top:15%; */
+        }
+        .content3{
+          display: flex;
+          align-items: center;
+          margin:8% 8%;
+        }
+        .card .scale{
+          overflow: hidden;
+          
+        }
+        .card img{
+          transition: 1s;
+        }
+        .card img:hover{
+          transform: scale(1.5);
+          transition: 1s;
+        }
+        .content4{
+          /* align-items: center; */
+          margin:10% auto;
+        }
+        form{
+          padding: 40px;
+          box-shadow: 2px 2px 5px rgb(76, 75, 75,.5),-2px -2px 5px rgb(76, 75, 75,.5);
+          border-radius: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md  sticky-top" style="background-color: rgb(90, 87, 87);">
+        <div class="container-fluid d-flex " class="nav" >
+          <a class="navbar-brand text-white" href="#" style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;">
+            <img src="D:\Html Arzu\Images\logo2.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" style="margin:0 10px">My Page</a>
+          <button class="navbar-toggler bg-light" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+          </button> </div>
+          <div class=" collapse navbar-collapse navlinks justify-content-end text-center " id="navbarNav">
+            <ul class="navbar-nav ">
+              <li class="nav-item me-md-5" >
+                <a class="nav-link active" aria-current="page" href="#home"  id="anher" style="border-radius: 5px;">Home</a>
+              </li>
+              <li class="nav-item me-md-5">
+                <a class="nav-link" href="#about" id="anher" style="border-radius: 5px;">About</a>
+              </li>
+              <li class="nav-item me-md-5">
+                <a class="nav-link" href="#service" id="anher" style="border-radius: 5px;">service</a>
+              </li>
+              <li class="nav-item me-md-5">
+                <a class="nav-link"  href="#contact" aria-disabled="false" id="anher" style="border-radius: 5px;">Contact</a>
+              </li>
+            </ul>
+          </div>
+       
+      </nav>
+
+      <!-- END OF NAV -->
+
+      <section id="home" style="height:100vh; width:100vw;">
+        <div>
+        <video autoplay muted loop id="video" style="height:100vh; width:100vw;"> 
+            <source src="D:\Html Arzu\Images\vid.mp4" type="video/mp4" >
+          </video>
+          <div class="content row mt-md-5 mt-5 me-3 my-md-6">
+            <div class=" col-12  m-3">
+              <h1 class="display-5 mb-md-0 mb-4">WELCOME TO MY PAGE<br> I AM <span class="span1"> WEB DEVELOPER </span></h1>
+              <!-- <h1 class="display-5"> I AM <span class="span2"> JAVA DEVELOPER </span></h1> -->
+              <p class="my-lg-2 my-3 mt-3" style="font-size: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta maiores magnam voluptatibus veritatis laboriosam beatae consequatur illo nulla at tempora debitis fugit quia eos optio quidem velit, explicabo provident cupiditate?</p>
+              <button class="btn btn-primary">LETS START</button>
+            </div>
+            <!-- <div class="col-md-6 col-12">
+              <img src="D:\Html Arzu\Images\webimg.jpg" alt="web-image">
+            </div> -->
+         </div>
+        </div>
+        <!-- END OF HOME --------------------------------------->
+
+      </section>
+      <section id="about" class="" style="height:100vh; width:100vw; background-color:rgb(240, 250, 250)">
+      <div class="row content2 ms-3 me-3" style="">
+        <div class="col-md-6 col-12" style="margin:0 auto">
+          <img src="D:\Html Arzu\Images\img8.jpg" alt="webimage" class="img-fluid" style="object-fit: cover;border-radius: 10px;">
+        </div>
+        <div class="col-md-6 col-12">
+          <h1>ABOUT</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores sit at enim impedit nisi assumenda corrupti cumque, sapiente rerum iste quidem earum. Quia et molestias velit, dolor similique iusto? Cum!</p>
+          <a href="">More details</a>
+        </div>
+      </div>
+    </section>
+    <!-- END OF ABOUT------------------------------------------------- -->
+
+      <section id="service" style="height:100vh; width:100vw; background-color:rgb(248, 245, 252)">
+        <div class="row content3">
+        <h1 class="text-center mb-lg-2"> OUR SERVICES</h1>
+          <div class="col-md-4 my-2 mb-md-0 mb-4">
+            <div class="card shadow">
+              <div class="scale">
+              <img src="D:\Html Arzu\Images\img5.jpg" alt="" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">E-Commerce</h5>
+                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <a href="#" type="button" class="btn btn-success mt-1">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-2 mb-md-0 mb-4">
+            <div class="card shadow">
+              <div class="scale">
+              <img src="D:\Html Arzu\Images\img8.jpg" alt="" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Web Design</h5>
+                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <a href="#" type="button" class="btn btn-success mt-1">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-2 col-12 mb-md-0 mb-4">
+            <div class="card shadow">
+              <div class="scale">
+              <img src="D:\Html Arzu\Images\img9.jpg" alt="" class="card-img-top">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Responsive website</h5>
+                <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <a href="#" type="button" class="btn btn-success mt-1">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF SERVICE -->
+
+      <section id="contact" style="height:100vh; width:100vw; background-color:rgb(230, 238, 229)">
+        <div class="row content4">
+          <div class="col-12 md-6">
+            <form action="">
+              <div class="text-center mb-3">
+                <h1>Conduct Form</h1>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="">NAME</label>
+                <input class="form-control" type="text" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="">EMAIL</label>
+                <input  class="form-control" type="email" required>
+              </div>
+              <div>
+                <button class="btn btn-primary type=submit py-lg-2 py-3">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- END OF CONDUCT -->
+ <script>
+ /*let arr=[1,2,3,2,6,1,1,5,3];
+ let brr=[];
+ arr=arr.sort()
+ let count=1;
+ for(var i=1;i<9;i++)
+ count=1;
+  {
+     if(arr[i]==arr[i-1])
+     {
+       count+=1;
+       if(!brr.includes(arr[i]))
+       {
+        brr.push(arr[i])
+       }
+     } 
+
+     else if(arr[i]!=arr[i-1])
+     {
+       count=1;
+       if(!brr.includes(arr[i]))
+       {
+        brr.push(arr[i])
+       }
+     } 
+  }
+ console.log(brr,count);
+</script>
+</body>
+</html>
