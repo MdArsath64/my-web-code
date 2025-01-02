@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYPROJECT</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           background-color: rgb(13, 14, 13);
+        }
+        .one{
+            background-color: brown;
+            width:365px; height: 470px;
+            margin-top:10%;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .main{
+            position: relative;
+            background-image: linear-gradient(rgb(226, 107, 126) 40%,rgb(74, 74, 143));
+            padding: 40px;
+            text-align: center;
+            width:350px; height: 450px;
+            background-color: rgb(124, 124, 124);
+            margin: auto;
+            margin-top: 3%;
+            margin-bottom: 10%;
+            border-radius: 8px;
+            
+            
+        }
+         @keyframes mr{
+            100%{
+            transform: rotate(360deg);
+            
+            }
+        } 
+            .main::before{
+                content: "";
+                position: absolute;
+                width: 350px; height:450px;
+                background:linear-gradient(0deg,transparent,rgb(7, 179, 247),rgb(0, 183, 255),rgb(8, 195, 241));
+                left: -50%; top:-50%;
+                 animation:mr 4s linear infinite;  
+                transform-origin: bottom right;
+                z-index: -1;
+                animation-delay: -6s;
+                
+            }
+            
+            .main::after{
+                content: "";
+                position: absolute;
+                width: 350px; height:450px;
+                background:linear-gradient(0deg,transparent,rgb(5, 191, 238),rgb(7, 240, 240),rgb(4, 209, 236));
+                left: -50%; top:-50%;
+                 animation:mr 4s linear infinite;  
+                transform-origin: bottom right;
+                z-index: -1;
+            }
+        .main form{
+            padding: 40px;
+        }
+        form input{
+            background-color: rgb(202, 202, 201);
+            cursor: pointer;
+        }
+        form button{
+            color:rgb(241, 238, 238);
+            background-color: rgb(69, 10, 245);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="one">
+    <div class="main">
+        <h1>LOGIN PAGE</h1>
+        <form>
+            <label>USER NAME</label><br>
+            <input type="text" value="" placeholder="Enter your name" style="color:rgb(40, 40, 41)"><br><br>
+            <label>PASSWORD</label><br>
+            <input type="password" value="" placeholder="Enter your Password" style="color:rgb(17, 17, 17)"><br><br>
+            <button type="submit">Forget Password?</button>
+            <br><br>
+            <p>Already  have an account </p>
+            <button type="button">LOGIN</button><br><br>
+            <p>click for new register</p>
+            <button type="submit" value="submit">SIGN UP</button><br><br>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
