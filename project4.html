@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/calci.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Simple Calculator</title>
+</head>
+<body>
+    <div class="one">
+        <table class="tab">
+        <tr>
+            <td colspan="3"><input type="text" id="resultbox"></td>
+            <td><button id="btn" onclick="clearbox()">C</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn" onclick="display(1)">1</button></td>
+            <td><button id="btn" onclick="display(2)">2</button></td>
+            <td><button id="btn" onclick="display(3)">3</button></td>
+            <td><button id="btn" onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn" onclick="display(4)">4</button></td>
+            <td><button id="btn" onclick="display(5)">5</button></td>
+            <td><button id="btn" onclick="display(6)">6</button></td>
+            <td><button id="btn" onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn" onclick="display(7)">7</button></td>
+            <td><button id="btn" onclick="display(8)">8</button></td>
+            <td><button id="btn" onclick="display(9)">9</button></td>
+            <td><button id="btn" onclick="display('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn" onclick="display('.')">.</button></td>
+            <td><button id="btn" onclick="display(0)">0</button></td>
+            <td><button id="btn" onclick="display('/')">/</button></td>
+            <td><button id="btn" onclick="calculate()">=</button></td>
+        </tr>
+        </table>
+    </div>
+    
+    <script>
+    //     let x=document.querySelector("#resultbox").value;
+       function clearbox(){
+        let a=document.querySelector("#resultbox").value= "";
+
+        }
+        function display(val){
+         let b=document.querySelector("#resultbox").value += val;
+        }
+        function calculate()
+        {
+        let c=document.querySelector("#resultbox").value;
+        let d=eval(c);
+        document.querySelector("#resultbox").value=d;
+        }
+    </script>
+</body>
+</html>
